@@ -29,7 +29,7 @@ const ConfigurationForm: React.FC<ConfigurationFormProps> = ({ close }) => {
     resolver: zodResolver(openAIAPIConfigSchema),
     defaultValues: {
       openAIKey: openAICreds ? openAICreds.openAIKey : "",
-      temparature: openAICreds ? openAICreds.temparature : [0.6],
+      temperature: openAICreds ? openAICreds.temperature : [0.6],
       baseUrl: openAICreds ? openAICreds.baseUrl : "",
       openAIModel: openAICreds ? openAICreds.openAIModel : "",
     },
@@ -54,7 +54,7 @@ const ConfigurationForm: React.FC<ConfigurationFormProps> = ({ close }) => {
           form.resetField("openAIKey", {
             defaultValue: "",
           });
-          form.resetField("temparature", {
+          form.resetField("temperature", {
             defaultValue: [0.6],
           });
           form.resetField("openAIModel", {
@@ -123,21 +123,21 @@ const ConfigurationForm: React.FC<ConfigurationFormProps> = ({ close }) => {
         />
         <FormField
           control={form.control}
-          name="temparature"
+          name="temperature"
           render={({ field }) => {
             return (
               <FormItem>
-                <FormLabel>Temprature</FormLabel>
+                <FormLabel>Temperature</FormLabel>
                 <FormDescription>
-                  Ranges between 0 to 1. Temprature ~ [
-                  {form.getValues("temparature")}]
+                  Ranges between 0 to 1. Temperature ~ [
+                  {form.getValues("temperature")}]
                 </FormDescription>
                 <FormControl>
                   <Slider
                     defaultValue={[0]}
                     max={1}
                     step={0.1}
-                    value={form.getValues("temparature")}
+                    value={form.getValues("temperature")}
                     onValueChange={(value) => field.onChange(value)}
                   />
                 </FormControl>

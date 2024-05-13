@@ -70,12 +70,16 @@ function RenderErrorMessage({
     return (
       <div className="flex w-full justify-center">
         <div className="w-full md:w-3/5">
-          <Alert variant={"destructive"} className="w-full">
+          <Alert
+            variant={"destructive"}
+            className="w-full bg-[#7f1d1d] text-white"
+          >
             <MessageSquareWarning className="h-4 w-4" />
             <AlertTitle>Error</AlertTitle>
             <AlertDescription>{errorMessage}</AlertDescription>
             <AlertDescription className="mt-1 w-full">
-              Please update your OpenAI API integration configuration and then retry.
+              Please update your OpenAI API integration configuration and then
+              retry.
             </AlertDescription>
             <AlertDescription className="flex w-full justify-end">
               <Button size="sm" onClick={handleRetryResponseGeneration}>
@@ -122,4 +126,3 @@ const ChatMessages = forwardRef<HTMLDivElement, ChatMessagesProps>(
 );
 
 export { ChatMessages };
-

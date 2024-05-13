@@ -17,9 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${inter.className} flex flex-row h-full w-full justify-center dark:bg-[#1f2226] md:py-5`}
+        className={`${inter.className} flex flex-row h-full w-full justify-center dark:bg-[#1f2226]`}
       >
-        <div className="w-full md:w-4/5">{children}</div>
+        <div className="w-full md:w-4/5 md:py-5">{children}</div>
       </body>
     </html>
   );

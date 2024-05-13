@@ -61,7 +61,7 @@ function Chatbox() {
         },
         {
           model: openAIConfig?.openAIModel,
-          temperature: openAIConfig?.temparature[0],
+          temperature: openAIConfig?.temperature[0],
           stream: true,
         }
       );
@@ -92,7 +92,6 @@ function Chatbox() {
       setInputDisabled(false);
     } catch (e: any) {
       console.error(e);
-      scrollToBottomOfMessages();
       setError(e.error.message);
       setLoading(false);
       setInputDisabled(false);
@@ -114,6 +113,12 @@ function Chatbox() {
     const message = messages[messages.length - 1];
     generateAssistantResponse(message);
   }
+
+  useEffect(() => {
+    if (error) {
+      scrollToBottomOfMessages();
+    }
+  }, [error]);
 
   useEffect(() => {
     if (messages.length > 0 && isResponsePending) {
@@ -144,4 +149,3 @@ function Chatbox() {
 }
 
 export { Chatbox };
-

@@ -2,6 +2,8 @@
 
 ChatBot is an application designed for conversational interactions powered by OpenAI's GPT models. This application provides users with a chat interface to engage in conversations with AI models provided by OpenAI using a simple web interface.
 
+<span style="font-size: 20px;">[Demo](https://663fc54dd531b6203af14d95--resonant-arithmetic-596875.netlify.app/)</span>
+
 ## Basic Requirements
 
 Before getting started with ChatBot, make sure your system meets the following requirements:
@@ -55,9 +57,27 @@ This will start the application and open it in your default web browser.
 
 Upon opening the web application, you will be presented with a chat interface. Before you can start chatting with AI models, you need to provide the below details:
 
-- **OpenAI API Key**: OpenAI API key provided by OpenAI to authenticate requests. If you don't have an API key, you can obtain one from the OpenAI website.
+- **API Key**: An API key provided by the service provider to authenticate requests. If you don't have an API key, you can obtain one from the respective provider's website.
 
-- **OpenAI API Base URL**: Provide the base URL for the OpenAI API. This is usually https://platform.openai.com/docs/api-reference.
+  ```bash
+  For OpenAI:
+  https://platform.openai.com/api-keys
+
+  For TogetherAI:
+  https://api.together.ai/settings/api-keys
+  ```
+
+- **Base API URL**: Provide the base API url.
+
+  Base API url examples:
+
+  ```bash
+  For OpenAI:
+  https://api.openai.com/v1/
+
+  For TogetherAI:
+  https://api.together.xyz/v1/
+  ```
 
 - **OpenAI Model Name**: The name of the OpenAI model you want to use for generating responses. You can choose from various models provided by OpenAI, such as GPT-3.
 

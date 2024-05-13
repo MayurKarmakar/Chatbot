@@ -11,7 +11,7 @@ const messagesSchema = z.array(messageSchema);
 
 const openAIAPIConfigSchema = z.object({
   openAIKey: z.string().min(1, "OpenAI API Key can't be empty"),
-  temparature: z.number().array().min(0).max(1),
+  temperature: z.number().array().min(0).max(1),
   baseUrl: z.string().min(1, "OpenAI API Base url can't be empty").url(),
   openAIModel: z.string().min(1, "Model name can't be empty"),
 });

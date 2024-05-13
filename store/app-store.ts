@@ -11,14 +11,14 @@ const useAppStore = create<z.infer<typeof appStoreSchema>>()(
         messages: [],
         setOpenAIConfig: ({
           openAIKey: secretKey,
-          temparature,
+          temperature: temparature,
           baseUrl,
           openAIModel,
         }) => {
           set({
             openAIConfig: {
               openAIKey: secretKey,
-              temparature: temparature,
+              temperature: temparature,
               baseUrl: baseUrl,
               openAIModel: openAIModel,
             },
