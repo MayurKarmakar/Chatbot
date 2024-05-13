@@ -2,7 +2,7 @@
 
 ChatBot is an application designed for conversational interactions powered by OpenAI's GPT models. This application provides users with a chat interface to engage in conversations with AI models provided by OpenAI using a simple web interface.
 
-<span style="font-size: 20px;">[Demo](https://663fc54dd531b6203af14d95--resonant-arithmetic-596875.netlify.app/)</span>
+<span style="font-size: 20px;">[Demo](https://6642007403039c07f38a7718--resonant-arithmetic-596875.netlify.app/)</span>
 
 ## Basic Requirements
 
